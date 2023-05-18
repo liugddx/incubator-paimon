@@ -19,7 +19,7 @@ if [ ! "$SONAR_TOKEN" ]; then
   exit 0
 fi
 ./mvnw --batch-mode verify sonar:sonar \
--Dmaven.test.skip=true -Dsonar.host.url=https://sonarcloud.io \
+-Dsonar.host.url=https://sonarcloud.io \
 -Dsonar.organization=apache \
 -Dsonar.projectKey=apache_incubator-paimon \
 -Dsonar.core.codeCoveragePlugin=jacoco \
