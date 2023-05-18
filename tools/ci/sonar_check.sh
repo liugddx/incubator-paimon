@@ -20,8 +20,9 @@ if [ ! "$SONAR_TOKEN" ]; then
 fi
 ./mvnw --batch-mode verify sonar:sonar \
 -Dsonar.host.url=https://sonarcloud.io \
--Dsonar.organization=apache \
--Dsonar.projectKey=apache_incubator-paimon \
+-Dsonar.organization=Guangdong Liu \
+-Dsonar.login=63e341bf9ba2e9721f29dca7266cec9f7e605377 \
+-Dsonar.projectKey=liugddx_incubator-paimon \
 -Dsonar.core.codeCoveragePlugin=jacoco \
 -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml \
 -Dhttp.keepAlive=false -Dmaven.wagon.http.pool=false \
