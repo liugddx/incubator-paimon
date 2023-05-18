@@ -14,10 +14,8 @@
 # limitations under the License.
 
 name: SonarCloud
-on:
-  schedule:
-    - cron: '0 1 * * *'
-  workflow_dispatch:
+on: [push, pull_request]
+
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.event.number || github.run_id }}
